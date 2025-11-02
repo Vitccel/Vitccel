@@ -6,20 +6,28 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
+const breadcrumbs = [
+  { text: 'Inicio', link: '/' },
+  { text: 'Contacto', link: '/contacto' },
+];
+
+
 export default function Contacto() {
   return (
     <>
 
       <Helmet>
         <title>Contacto | Solicite Asesoría y Soporte Técnico | Vitccel</title>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content="¿Listo para potenciar su infraestructura? Contáctenos hoy. Encuentre nuestro teléfono, correo y ubicación en Bogotá, Colombia. Ofrecemos una asesoría inicial sin costo para su empresa."
         />
       </Helmet>
 
-      <PageBanner title="Contacto" />
-
+      <PageBanner
+        title="Contacto"
+        breadcrumbs={breadcrumbs}
+      />
       <section className="container mx-auto py-20 px-4 md:px-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 

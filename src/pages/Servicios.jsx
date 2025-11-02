@@ -10,6 +10,8 @@ import SecurityIcon from '@mui/icons-material/Security';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import LanIcon from '@mui/icons-material/Lan';
 import ArticleIcon from '@mui/icons-material/Article';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+
 
 // Datos de los servicios para un mantenimiento fácil
 const servicesData = [
@@ -43,21 +45,35 @@ const servicesData = [
     description: "Optimice sus recursos y asegure la legalidad de su software con licenciamiento Microsoft, VMWare y otras soluciones empresariales.",
     link: "/servicios/licencias"
   },
+  {
+  icon: <SupportAgentIcon sx={{ fontSize: 40 }} />,
+  title: "Soporte de TI y Servicios Gestionados",
+  description: "Delegue la gestión de su TI. Ofrecemos mesa de ayuda, monitoreo proactivo y soporte experto para mantener su operación funcionando sin interrupciones.",
+  link: "/servicios/soporte"
+  },
+];
+
+const breadcrumbs = [
+  { text: 'Inicio', link: '/' },
+  { text: 'Nuestros Servicios', link: '/servicios' },
 ];
 
 export default function Servicios() {
   return (
     <>
 
-       <Helmet>
+      <Helmet>
         <title>Soluciones y Servicios TI para Empresas en Colombia | Vitccel</title>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content="Explore nuestro portafolio completo de servicios TI. Desde ciberseguridad avanzada y backup en la nube hasta redes de fibra óptica y licenciamiento. Potenciamos la transformación digital de su negocio."
         />
       </Helmet>
 
-      <PageBanner title="Nuestros Servicios" />
+      <PageBanner
+        title="Nuestros Servicios"
+        breadcrumbs={breadcrumbs}
+      />
 
       {/* Sección de Introducción */}
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">

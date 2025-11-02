@@ -9,7 +9,7 @@ import Nube from './pages/servicios/Nube'
 import Redes from './pages/servicios/Redes'
 import Seguridad from './pages/servicios/Seguridad'
 import Licencias from './pages/servicios/Licencias'
-import Acronis from './pages/servicios/Acronis'
+import Soporte from './pages/servicios/Soporte'
 import NotFound from './pages/NotFound'
 export default function App(){
   return (
@@ -23,7 +23,7 @@ export default function App(){
         <Route path='/servicios/redes' element={<Redes/>} />
         <Route path='/servicios/seguridad' element={<Seguridad/>} />
         <Route path='/servicios/licencias' element={<Licencias/>} />
-        <Route path='/servicios/acronis' element={<Acronis/>} />
+        <Route path='/servicios/soporte' element={<Soporte/>} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </Layout>

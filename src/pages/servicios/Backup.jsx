@@ -47,19 +47,27 @@ const benefitsData = [
   },
 ];
 
+const breadcrumbs = [
+  { text: 'Inicio', link: '/' },
+  { text: 'Servicios', link: '/servicios' },
+  { text: 'Backup & Recovery', link: '/servicios/backup' },
+];
+
 export default function Backup() {
   return (
     <>
       <Helmet>
         <title>Backup y Recuperación de Desastres en la Nube | Vitccel</title>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content="Asegure la continuidad de su negocio con soluciones de backup en la nube. Protegemos servidores, Microsoft 365 y estaciones de trabajo contra pérdida de datos y ransomware."
         />
       </Helmet>
 
-      <PageBanner title="Backup & Recovery" />
-
+      <PageBanner
+        title="Backup & Recovery"
+        breadcrumbs={breadcrumbs}
+      />
       {/* --- Sección de Introducción --- */}
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">
         <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Su Póliza de Seguro Digital</h2>
@@ -70,22 +78,22 @@ export default function Backup() {
 
       {/* --- Grid de Beneficios --- */}
       <section className="bg-[#EEF9FF]">
-          <div className="container mx-auto py-20 px-4 md:px-40">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Características de Nuestro Servicio</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefitsData.map((benefit, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col text-center items-center">
-                  <div className="text-[#06A3DA] mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-bold font-sen text-[#0D486B] mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600 flex-grow">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
+        <div className="container mx-auto py-20 px-4 md:px-40">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Características de Nuestro Servicio</h2>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefitsData.map((benefit, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col text-center items-center">
+                <div className="text-[#06A3DA] mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-bold font-sen text-[#0D486B] mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 flex-grow">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* --- Sección de Aliados Tecnológicos --- */}
