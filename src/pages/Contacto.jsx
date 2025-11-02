@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import PageBanner from '../components/PageBanner';
 // Iconos de MUI para la información de contacto
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -12,8 +12,8 @@ export default function Contacto() {
 
       <Helmet>
         <title>Contacto | Solicite Asesoría y Soporte Técnico | Vitccel</title>
-        <meta
-          name="description"
+        <meta 
+          name="description" 
           content="¿Listo para potenciar su infraestructura? Contáctenos hoy. Encuentre nuestro teléfono, correo y ubicación en Bogotá, Colombia. Ofrecemos una asesoría inicial sin costo para su empresa."
         />
       </Helmet>

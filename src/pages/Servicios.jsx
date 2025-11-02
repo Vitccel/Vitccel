@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PageBanner from '../components/PageBanner';
 import CtaSection from '../components/CtaSection';
@@ -49,11 +49,11 @@ export default function Servicios() {
   return (
     <>
 
-      <Helmet>
+       <Helmet>
         <title>Soluciones y Servicios TI para Empresas en Colombia | Vitccel</title>
-        <meta
-          name='description'
-          content='Explore nuestro portafolio completo de servicios TI. Desde ciberseguridad avanzada y backup en la nube hasta redes de fibra óptica y licenciamiento. Potenciamos la transformación digital de su negocio.'
+        <meta 
+          name="description" 
+          content="Explore nuestro portafolio completo de servicios TI. Desde ciberseguridad avanzada y backup en la nube hasta redes de fibra óptica y licenciamiento. Potenciamos la transformación digital de su negocio."
         />
       </Helmet>
 

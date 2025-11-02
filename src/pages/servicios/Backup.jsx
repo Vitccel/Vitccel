@@ -1,75 +1,107 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+// src/pages/servicios/Backup.jsx
 
-export default function Backup(){
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import PageBanner from '../../components/PageBanner';
+import CtaSection from '../../components/CtaSection';
+
+// Importamos iconos para los beneficios de Backup & Recovery
+import CloudDoneIcon from '@mui/icons-material/CloudDone';
+import RestorePageIcon from '@mui/icons-material/RestorePage';
+import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
+import DevicesIcon from '@mui/icons-material/Devices';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import GppGoodIcon from '@mui/icons-material/GppGood';
+
+// Array de beneficios específicos para Backup & Recovery
+const benefitsData = [
+  {
+    icon: <CloudDoneIcon sx={{ fontSize: 40 }} />,
+    title: "Respaldo Híbrido y Flexible",
+    description: "Proteja sus datos tanto en la nube como en almacenamiento local, garantizando una estrategia de backup 3-2-1 robusta y a prueba de fallos."
+  },
+  {
+    icon: <RestorePageIcon sx={{ fontSize: 40 }} />,
+    title: "Recuperación Rápida y Granular",
+    description: "Restaure cualquier cosa, desde un único archivo hasta un servidor completo, en minutos. Minimice el tiempo de inactividad (RTO) y la pérdida de datos (RPO)."
+  },
+  {
+    icon: <GppGoodIcon sx={{ fontSize: 40 }} />,
+    title: "Protección Anti-Ransomware",
+    description: "Nuestras copias de seguridad son inmutables y están protegidas por IA, asegurando que sus respaldos no puedan ser cifrados ni eliminados por ciberatacantes."
+  },
+  {
+    icon: <DevicesIcon sx={{ fontSize: 40 }} />,
+    title: "Cobertura Universal",
+    description: "Respaldamos todo su entorno: servidores físicos y virtuales, estaciones de trabajo (Windows, Mac), documentos y aplicaciones en la nube como Microsoft 365."
+  },
+  {
+    icon: <VerifiedUserIcon sx={{ fontSize: 40 }} />,
+    title: "Pruebas de Recuperación",
+    description: "Validamos la integridad de sus copias de seguridad con pruebas de recuperación automatizadas, dándole la certeza de que sus datos son recuperables cuando los necesite."
+  },
+  {
+    icon: <AllInclusiveIcon sx={{ fontSize: 40 }} />,
+    title: "Automatización Completa",
+    description: "Configure sus políticas de respaldo una vez y deje que nuestro sistema se encargue del resto. Reciba informes y alertas automáticas para una total tranquilidad."
+  },
+];
+
+export default function Backup() {
   return (
-    <div className="prose max-w-none">
-      <p className="mt-2"></p>
-      <p className="mt-2">Loading...</p>
-      <p className="mt-2"> </p>
-      <p className="mt-2">+57 3235806796
-                        contacto@vitccel.com</p>
-      <p className="mt-2"></p>
-      <p className="mt-2"> </p>
-      <a href="https://wa.me/573235806796?text=Hola%2C%20estoy%20interesado%20en%20recibir%20información%20sobre%20sus%20servicios." className="text-blue-600 hover:underline"></a>
-      <p className="mt-2"></p>
-      <p className="mt-2">Vitccel
-                     --&gt;
-                
-                
-                    
-                
-                
-                    
-                        Inicio
-                        
-                        Servicios
-                       
-                    
-                        Contacto
-                    
-            
+    <>
+      <Helmet>
+        <title>Backup y Recuperación de Desastres en la Nube | Vitccel</title>
+        <meta 
+          name="description" 
+          content="Asegure la continuidad de su negocio con soluciones de backup en la nube. Protegemos servidores, Microsoft 365 y estaciones de trabajo contra pérdida de datos y ransomware."
+        />
+      </Helmet>
 
-            
-            
-                
-                    Backup de información en nube
-                    
-                        Inicio
-                        Servicios
-                        Backup de información en nube</p>
-      <p className="mt-2"> </p>
-      <p className="mt-2">Vitccel
-                         
-                            Somos una empresa con más de diez años de experiencia en el sector de la tecnología y la informática, dedicada a ofrecer soluciones innovadoras, eficientes y a la medida de cada cliente.
-                            Desde nuestra fundación en la ciudad de Cali, nos hemos comprometido con el crecimiento y la transformación digital de empresas de diferentes sectores, brindando servicios de alta calidad respaldados por un equipo de profesionales altamente capacitados y comprometidos con la excelencia.
-                            Nuestro portafolio abarca una amplia gama de servicios tecnológicos, soporte técnico, infraestructura TI, consultoría especializada, ciberseguridad, soluciones en la nube. Cada uno de nuestros proyectos está diseñado para optimizar procesos, mejorar la productividad y garantizar la competitividad de nuestros clientes en un mercado cada vez más digitalizado.
-                            Trabajamos con las mejores tecnologías del mercado, siempre alineados con las últimas tendencias y buenas prácticas del sector, para ofrecer resultados sostenibles, escalables y adaptados a las necesidades específicas de cada organización.</p>
-      <p className="mt-2"></p>
-      <p className="mt-2"> </p>
-      <p className="mt-2">Nnuestros Partnerts
-                                 --&gt;</p>
-      <p className="mt-2"> </p>
-      <p className="mt-2">Menú Navegación
-                             Inicio
-                             Nosotros
-                             Servicios
-                             Contacto
-                             WhatsApp</p>
-      <p className="mt-2"></p>
-      <p className="mt-2">Contacto
-                           
-                            
-                                
-                                contacto@vitccel.com</p>
-      <p className="mt-2">+57 3235806796</p>
-      <p className="mt-2">vitccel.com</p>
-      <p className="mt-2"> </p>
-      <p className="mt-2">Vitccel 2025, Todos los derechos reservados.</p>
-      <p className="mt-2">Diseñado por Vitccel</p>
-      <p className="mt-2"> </p>
-      <a href="#" className="text-blue-600 hover:underline"></a>
-      <p className="mt-2"> </p>
-    </div>
-  )
-}
+      <PageBanner title="Backup & Recovery" />
+
+      {/* --- Sección de Introducción --- */}
+      <section className="container mx-auto py-20 px-4 md:px-40 text-center">
+        <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Su Póliza de Seguro Digital</h2>
+        <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+          Un desastre puede ocurrir en cualquier momento: un error humano, una falla de hardware o un ciberataque. Con nuestras soluciones de respaldo y recuperación, garantizamos que su información crítica esté siempre segura y disponible para ser restaurada al instante.
+        </p>
+      </section>
+
+      {/* --- Grid de Beneficios --- */}
+      <section className="bg-[#EEF9FF]">
+          <div className="container mx-auto py-20 px-4 md:px-40">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Características de Nuestro Servicio</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefitsData.map((benefit, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col text-center items-center">
+                  <div className="text-[#06A3DA] mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-bold font-sen text-[#0D486B] mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600 flex-grow">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+      </section>
+
+      {/* --- Sección de Aliados Tecnológicos --- */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-40 text-center">
+          <h2 className="text-2xl font-bold text-[#091E3E] font-sen mb-8">
+            Tecnología de Respaldo Confiable y Segura
+          </h2>
+          <div className="flex justify-center items-center gap-x-12">
+            <img src="/assets/img/partners/acronis-partner.png" alt="Logo de Acronis Cyber Protect Cloud" className="h-20" />
+            <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft Partner" className="h-12" />
+          </div>
+        </div>
+      </section>
+
+      <CtaSection />
+    </>
+  );
+} 
