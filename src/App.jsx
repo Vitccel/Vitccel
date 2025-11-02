@@ -11,9 +11,11 @@ import Seguridad from './pages/servicios/Seguridad'
 import Licencias from './pages/servicios/Licencias'
 import Soporte from './pages/servicios/Soporte'
 import NotFound from './pages/NotFound'
+import ScrollToTop from './components/ScrollToTop'
 export default function App(){
   return (
     <Layout>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Inicio/>} />
         <Route path='/contacto' element={<Contacto/>} />
