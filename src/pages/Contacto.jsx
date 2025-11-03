@@ -1,7 +1,8 @@
+// src/pages/Contacto.jsx (versión final y corregida)
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageBanner from '../components/PageBanner';
-// Iconos de MUI para la información de contacto
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -11,16 +12,15 @@ const breadcrumbs = [
   { text: 'Contacto', link: '/contacto' },
 ];
 
-
 export default function Contacto() {
   return (
     <>
-
       <Helmet>
         <title>Contacto | Solicite Asesoría y Soporte Técnico | Vitccel</title>
+        {/* --- 1. META DESCRIPCIÓN CORREGIDA --- */}
         <meta
           name="description"
-          content="¿Listo para potenciar su infraestructura? Contáctenos hoy. Encuentre nuestro teléfono, correo y ubicación en Bogotá, Colombia. Ofrecemos una asesoría inicial sin costo para su empresa."
+          content="¿Listo para potenciar su infraestructura? Contáctenos hoy. Encuentre nuestro teléfono, correo y ubicación en Cali, Colombia. Ofrecemos una asesoría inicial sin costo para su empresa."
         />
       </Helmet>
 
@@ -45,7 +45,7 @@ export default function Contacto() {
                 <LocationOnIcon className="text-[#06A3DA] text-3xl mt-1" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-800">Nuestra Oficina</h3>
-                  <p className="text-gray-600">Bogotá, Colombia</p>
+                  <p className="text-gray-600">Cali, Colombia</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -65,34 +65,52 @@ export default function Contacto() {
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-lg h-64">
+              {/* --- 2. IFRAME DEL MAPA CORREGIDO --- */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.3928062808!2d-74.24789396349003!3d4.6482837172121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1!5e0!3m2!1ses-419!2sco!4v16788864"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254884.2818012219!2d-76.6415039239851!3d3.42158089456938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0f0803779%3A0x37631be3b138403!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses-419!2sco"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación de Vitccel en Bogotá"
+                title="Ubicación de Vitccel en Cali"
               ></iframe>
             </div>
           </div>
 
-          {/* Columna Derecha: Formulario Placeholder */}
+          {/* Columna Derecha: Formulario Funcional */}
           <div className="bg-white p-8 rounded-lg shadow-xl">
             <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Envíanos un Mensaje</h2>
             <p className="mt-2 mb-8 text-gray-600">
-              Para consultas, por favor utiliza nuestros canales de correo o teléfono mientras habilitamos nuestro formulario de contacto.
+              ¿Tienes un proyecto en mente o una consulta? Completa el formulario y nuestro equipo se pondrá en contacto contigo a la brevedad.
             </p>
-
-            {/* 2. AQUÍ ESTÁ EL FORMULARIO VISUAL DE REEMPLAZO */}
-            <div className="space-y-6 animate-pulse">
-              <div className="w-full h-12 bg-gray-200 rounded-md"></div>
-              <div className="w-full h-12 bg-gray-200 rounded-md"></div>
-              <div className="w-full h-12 bg-gray-200 rounded-md"></div>
-              <div className="w-full h-32 bg-gray-200 rounded-md"></div>
-              <div className="w-full h-12 bg-gray-300 rounded-full"></div>
-            </div>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-[#06A3DA] focus:border-[#06A3DA]" />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-[#06A3DA] focus:border-[#06A3DA]" />
+              </div>
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                <input type="text" id="subject" name="subject" required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-[#06A3DA] focus:border-[#06A3DA]" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                <textarea id="message" name="message" rows="5" required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-[#06A3DA] focus:border-[#06A3DA]"></textarea>
+              </div>
+              <div>
+                <button 
+                  type="submit" 
+                  className="w-full bg-[#06A3DA] hover:bg-[#0582ab] text-white font-bold py-4 px-10 rounded-full transition-colors duration-300 text-lg shadow-lg hover:shadow-cyan-400/50"
+                >
+                  Enviar Mensaje
+                </button>
+              </div>
+            </form>
           </div>
 
         </div>
