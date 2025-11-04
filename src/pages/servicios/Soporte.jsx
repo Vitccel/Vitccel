@@ -85,7 +85,7 @@ export default function Soporte() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <PageBanner title="Soporte de TI y Servicios Gestionados" breadcrumbs={breadcrumbs} />
+<PageBanner title="Soporte de TI y Servicios Gestionados" breadcrumbs={breadcrumbs} backgroundImage="/assets/img/Soporte-de-TI-Servicios-Gestionados.png" />
 
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">
         <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Su Departamento de TI, Externalizado y Potenciado</h2>
@@ -118,8 +118,8 @@ export default function Soporte() {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
             <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft" className="h-12" />
-            <img src="/assets/img/partners/hpe-aruba.png" alt="Logo de HPE Aruba Networking" className="h-12" />
-            <img src="/assets/img/partners/acronis-partner.png" alt="Logo de Acronis" className="h-20" />
+            <img src="/assets/img/partners/Aruba.png" alt="Logo de HPE Aruba Networking" className="h-12" />
+            <img src="/assets/img/partners/acronis.png" alt="Logo de Acronis" className="h-20" />
           </div>
         </div>
       </section>

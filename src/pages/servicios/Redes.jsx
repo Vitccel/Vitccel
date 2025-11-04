@@ -85,7 +85,7 @@ export default function Redes() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <PageBanner title="Redes y Conectividad" breadcrumbs={breadcrumbs} />
+<PageBanner title="Redes y Conectividad" breadcrumbs={breadcrumbs} backgroundImage="/assets/img/Redes-Conectividad.png" />
 
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">
         <h2 className="text-3xl font-bold font-sen text-[#0D486B]">La Columna Vertebral de su Operación Digital</h2>
@@ -117,11 +117,11 @@ export default function Redes() {
             Trabajamos Exclusivamente con Marcas Líderes
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-            <img src="/assets/img/partners/panduit.png" alt="Logo de Panduit" className="h-10" />
-            <img src="/assets/img/partners/siemon.png" alt="Logo de Siemon" className="h-16" />
-            <img src="/assets/img/partners/commscope.png" alt="Logo de Commscope" className="h-14" />
-            <img src="/assets/img/partners/hpe-aruba.png" alt="Logo de HPE Aruba Networking" className="h-12" />
-            <img src="/assets/img/partners/ubiquiti.png" alt="Logo de Ubiquiti" className="h-14" />
+            <img src="/assets/img/partners/Panduit.svg" alt="Logo de Panduit" className="h-10" />
+            <img src="/assets/img/partners/Siemon.webp" alt="Logo de Siemon" className="h-16" />
+            <img src="/assets/img/partners/Commscope.svg" alt="Logo de Commscope" className="h-14" />
+            <img src="/assets/img/partners/Aruba.png" alt="Logo de HPE Aruba Networking" className="h-12" />
+            <img src="/assets/img/partners/kaspersky.png" alt="Logo de Ubiquiti" className="h-14" />
           </div>
         </div>
       </section>

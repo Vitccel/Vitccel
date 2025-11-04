@@ -85,7 +85,7 @@ export default function Backup() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <PageBanner title="Backup & Recovery" breadcrumbs={breadcrumbs} />
+<PageBanner title="Backup & Recovery" breadcrumbs={breadcrumbs} backgroundImage="/assets/img/Backup-recovery.png" />
 
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">
         <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Su Póliza de Seguro Digital</h2>
@@ -117,7 +117,7 @@ export default function Backup() {
             Tecnología de Respaldo Confiable y Segura
           </h2>
           <div className="flex justify-center items-center gap-x-12">
-            <img src="/assets/img/partners/acronis-partner.png" alt="Logo de Acronis Cyber Protect Cloud" className="h-20" />
+            <img src="/assets/img/partners/acronis.png" alt="Logo de Acronis Cyber Protect Cloud" className="h-20" />
             <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft Partner" className="h-12" />
           </div>
         </div>

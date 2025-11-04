@@ -84,7 +84,8 @@ export default function Licencias() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <PageBanner title="Licenciamiento de Software" breadcrumbs={breadcrumbs} />
+<PageBanner title="Licenciamiento de Software" breadcrumbs={breadcrumbs} backgroundImage="/assets/img/Licenciamiento-de-Software.png" />
+
 
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">
         <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Gestión Inteligente de sus Activos de Software</h2>
@@ -117,7 +118,7 @@ export default function Licencias() {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
             <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft Partner" className="h-12" />
-            <img src="/assets/img/partners/vmware.png" alt="Logo de VMWare" className="h-8" />
+            <img src="/assets/img/partners/vmware.svg" alt="Logo de VMWare" className="h-8" />
           </div>
         </div>
       </section>

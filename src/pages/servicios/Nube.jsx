@@ -84,7 +84,7 @@ export default function Nube() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <PageBanner title="Soluciones en la Nube" breadcrumbs={breadcrumbs} />
+      <PageBanner title="Soluciones en la Nube" breadcrumbs={breadcrumbs} backgroundImage="/assets/img/Soluciones-en-la-Nube.png" />
 
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">
         <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Infraestructura Ágil, Segura y Rentable</h2>
@@ -118,7 +118,7 @@ export default function Nube() {
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
             <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft" className="h-12 opacity-70" />
             <img src="/assets/img/partners/acronis-cloud.png" alt="Logo de Dade2" className="h-16 opacity-70" />
-            <img src="/assets/img/partners/vmware.png" alt="Logo de VMWare" className="h-8 opacity-70" />
+            <img src="/assets/img/partners/vmware.svg" alt="Logo de VMWare" className="h-8 opacity-70" />
           </div>
         </div>
       </section>

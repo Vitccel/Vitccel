@@ -84,7 +84,7 @@ export default function Seguridad() {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <PageBanner title="Ciberseguridad Avanzada" breadcrumbs={breadcrumbs} />
+<PageBanner title="Ciberseguridad Avanzada" breadcrumbs={breadcrumbs} backgroundImage="/assets/img/Ciberseguridad-Avanzada.png" />
 
       <section className="container mx-auto py-20 px-4 md:px-40 text-center">
         <h2 className="text-3xl font-bold font-sen text-[#0D486B]">Defensa Proactiva para un Mundo Digital Hostil</h2>
@@ -116,7 +116,7 @@ export default function Seguridad() {
             Impulsado por el Líder Mundial en Ciberprotección
           </h2>
           <div className="flex justify-center items-center">
-            <img src="/assets/img/partners/acronis-partner.png" alt="Logo de Acronis Cyber Protect Cloud" className="h-20" />
+            <img src="/assets/img/partners/acronis.png" alt="Logo de Acronis Cyber Protect Cloud" className="h-20" />
           </div>
         </div>
       </section>
