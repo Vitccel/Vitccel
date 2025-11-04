@@ -15,7 +15,7 @@ import HubIcon from '@mui/icons-material/Hub';
 import HandymanIcon from '@mui/icons-material/Handyman';
 
 const benefitsData = [
-  { icon: <SpeedIcon sx={{ fontSize: 40 }} />, title: "Conectividad de Ultra Alta Velocidad", description: "Implementamos soluciones de fibra óptica (FTTH) y cableado estructurado (Cat 6A/7) para garantizar el máximo rendimiento de su red y eliminar cuellos de botella." },
+  { icon: <SpeedIcon sx={{ fontSize: 40 }} />, title: "Conectividad de Ultra Alta Velocidad", description: "Implementamos soluciones de fibra óptica y cableado estructurado (Cat 6A/7) para garantizar el máximo rendimiento de su red y eliminar cuellos de botella." },
   { icon: <NetworkCheckIcon sx={{ fontSize: 40 }} />, title: "Máxima Estabilidad y Fiabilidad", description: "Utilizamos componentes certificados de marcas líderes para construir una infraestructura de red robusta que opera sin interrupciones, garantizando la continuidad operativa." },
   { icon: <AccountTreeIcon sx={{ fontSize: 40 }} />, title: "Diseño Escalable y a Futuro", description: "Nuestros diseños de red no solo satisfacen sus necesidades actuales, sino que están preparados para el crecimiento futuro de su empresa y la adopción de nuevas tecnologías." },
   { icon: <HandymanIcon sx={{ fontSize: 40 }} />, title: "Instalación Profesional y Certificada", description: "Nuestro equipo de técnicos certificados se encarga de la instalación, fusión y certificación de cada punto de red, cumpliendo con los más altos estándares de la industria." },

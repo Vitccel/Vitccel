@@ -36,7 +36,7 @@ export default function ServicesOverview() {
   return (
     <section id="servicios" className="py-20 bg-[#EEF9FF]">
       <div className="container mx-auto px-4 md:px-40 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#091E3E] font-sen">Soluciones Tecnológicas para su Crecimiento</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#091E3E] font-sen">Soluciones Tecnológicas para el Desarrollo de su Empresa</h2>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-700">
           Desde la ciberseguridad hasta la infraestructura en la nube, optimizamos cada aspecto de su entorno tecnológico.
         </p>
