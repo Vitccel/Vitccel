@@ -62,6 +62,26 @@ export default function Seguridad() {
           name="description"
           content="Proteja su negocio contra ransomware y amenazas de día cero con Acronis Cyber Protect. Ofrecemos soluciones EDR, XDR y backup integrado para una defensa total."
         />
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Ciberseguridad Gestionada y Protección de Endpoints",
+              "name": "Ciberseguridad Avanzada",
+              "description": "Protección proactiva para empresas contra ransomware y amenazas de día cero con Acronis Cyber Protect, incluyendo soluciones EDR y XDR.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Vitccel"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Colombia"
+              }
+            }
+          `}
+        </script>
       </Helmet>
 
       <PageBanner

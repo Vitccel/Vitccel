@@ -61,6 +61,25 @@ export default function Licencias() {
           name="description"
           content="Optimice costos y asegure la legalidad con nuestros servicios de licenciamiento de software. Somos partners de Microsoft en Colombia. Asesoría experta."
         />
+        <script type="application/ld+json">
+          {`
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Consultoría y Venta de Licenciamiento de Software",
+    "name": "Licenciamiento de Software",
+    "description": "Asesoría experta como partners de Microsoft para la optimización de costos y el cumplimiento normativo en licenciamiento de software empresarial.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Vitccel"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    }
+  }
+`}
+        </script>
       </Helmet>
 
       <PageBanner

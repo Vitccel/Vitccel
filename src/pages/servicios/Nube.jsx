@@ -62,6 +62,46 @@ export default function Nube() {
           name="description"
           content="Descubra nuestras soluciones en la nube para empresas. Ofrecemos servidores virtuales (IaaS) de alto rendimiento, escalables y seguros para optimizar su infraestructura TI."
         />
+
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Servidores Virtuales e Infraestructura como Servicio (IaaS)",
+            "name": "Soluciones en la Nube",
+            "description": "Ofrecemos servidores virtuales (IaaS) de alto rendimiento, escalables y seguros para optimizar la infraestructura TI de empresas en Colombia.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Vitccel"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Colombia"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Portafolio de Servicios TI",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Ciberseguridad Avanzada"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Backup & Recovery"
+                  }
+                }
+              ]
+            }
+          }
+        `}
+        </script>
       </Helmet>
 
       <PageBanner

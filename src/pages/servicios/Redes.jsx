@@ -63,6 +63,26 @@ export default function Redes() {
           name="description"
           content="Expertos en diseño e implementación de redes empresariales en Colombia. Ofrecemos soluciones de fibra óptica, cableado estructurado y conectividad de alta velocidad."
         />
+
+        <script type="application/ld+json">
+          {`
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Diseño e Implementación de Infraestructura de Red",
+    "name": "Redes y Conectividad",
+    "description": "Expertos en el diseño e implementación de redes de alta velocidad para empresas, utilizando fibra óptica y cableado estructurado certificado.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Vitccel"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    }
+  }
+`}
+        </script>
       </Helmet>
 
       <PageBanner

@@ -62,6 +62,26 @@ export default function Backup() {
           name="description"
           content="Asegure la continuidad de su negocio con soluciones de backup en la nube. Protegemos servidores, Microsoft 365 y estaciones de trabajo contra pérdida de datos y ransomware."
         />
+
+        <script type="application/ld+json">
+          {`
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Respaldo en la Nube y Recuperación de Desastres",
+    "name": "Backup & Recovery",
+    "description": "Aseguramos la continuidad del negocio con soluciones de backup en la nube para servidores, Microsoft 365 y estaciones de trabajo.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Vitccel"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    }
+  }
+`}
+        </script>
       </Helmet>
 
       <PageBanner
