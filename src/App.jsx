@@ -11,7 +11,11 @@ import Seguridad from './pages/servicios/Seguridad'
 import Licencias from './pages/servicios/Licencias'
 import Soporte from './pages/servicios/Soporte'
 import NotFound from './pages/NotFound'
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import CategoryPage from './pages/CategoryPage';
 import ScrollToTop from './components/ScrollToTop'
+
 export default function App(){
   return (
     <Layout>
@@ -26,6 +30,9 @@ export default function App(){
         <Route path='/servicios/seguridad' element={<Seguridad/>} />
         <Route path='/servicios/licencias' element={<Licencias/>} />
         <Route path='/servicios/soporte' element={<Soporte/>} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:slug' element={<BlogPost />} />
+        <Route path='/blog/categoria/:slug' element={<CategoryPage />} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </Layout>

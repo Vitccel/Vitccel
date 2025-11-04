@@ -25,8 +25,8 @@ export default function Navbar({ isScrolled }) {
   };
 
   // 1. DEFINIMOS LAS RUTAS DE LOS LOGOS PARA MANTENER EL CÓDIGO LIMPIO
-  const  logoBlanco = "/assets/logos/logo-vitccel.png"; // Logo para fondo blanco
-  const logoPrincipal  = "/assets/logos/logo-vitccel-white.png"; // Logo para fondo oscuro/transparente
+  const logoBlanco = "/assets/logos/logo-vitccel.png"; // Logo para fondo blanco
+  const logoPrincipal = "/assets/logos/logo-vitccel-white.png"; // Logo para fondo oscuro/transparente
 
   const navTextColor = isScrolled ? 'text-gray-800' : 'text-white';
 
@@ -34,11 +34,11 @@ export default function Navbar({ isScrolled }) {
     <>
       {/* Contenedor Principal del Navbar */}
       <div className={`w-full flex justify-between items-center px-4 md:px-40 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-6 border-b border-white/20'}`}>
-        
+
         <div>
           <Link to="/">
             {/* 2. APLICAMOS LA LÓGICA CONDICIONAL AL 'src' DEL LOGO */}
-            <img 
+            <img
               src={isScrolled ? logoPrincipal : logoBlanco}
               alt="Logo de Vitccel"
               className="h-20 transition-all duration-300"
@@ -49,19 +49,19 @@ export default function Navbar({ isScrolled }) {
         {/* Menú de Escritorio */}
         <div className="hidden md:flex items-center space-x-8 font-medium">
           <NavLink to="/" className={(props) => getNavLinkClasses(props, isScrolled)}>Inicio</NavLink>
-          
+
           <div className="relative group">
-            <NavLink 
-              to="/servicios" 
+            <NavLink
+              to="/servicios"
               className={(props) => getNavLinkClasses(props, isScrolled) + ' flex items-center gap-1'}
             >
               Servicios
-              <ExpandMoreIcon 
-                className="transition-transform duration-300 group-hover:rotate-180" 
+              <ExpandMoreIcon
+                className="transition-transform duration-300 group-hover:rotate-180"
                 fontSize="small"
               />
             </NavLink>
-            
+
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 z-10">
               <div className="bg-white rounded-md shadow-lg w-64">
                 {servicesLinks.map((service) => (
@@ -72,6 +72,9 @@ export default function Navbar({ isScrolled }) {
               </div>
             </div>
           </div>
+
+
+          <NavLink to="/blog" className={(props) => getNavLinkClasses(props, isScrolled)}>Blog</NavLink>
 
           <NavLink to="/contacto" className={(props) => getNavLinkClasses(props, isScrolled)}>Contacto</NavLink>
         </div>
@@ -93,38 +96,39 @@ export default function Navbar({ isScrolled }) {
         </div>
 
         <div className="flex flex-col items-center justify-center px-4 -mt-16">
-            
-            {/* 3. ACTUALIZAMOS EL LOGO MÓVIL PARA QUE SIEMPRE SEA EL BLANCO */}
-            <Link to="/" onClick={toggleMenu} className="mb-12">
-                 <img 
-                    src={logoBlanco} 
-                    alt="Logo de Vitccel" 
-                    className="h-24"
-                />
-            </Link>
 
-            {/* Enlaces */}
-            <NavLink to="/" onClick={toggleMenu} className={getMobileNavLinkClasses}>Inicio</NavLink>
-          
-            <div className="text-center">
-              <div className="flex items-center justify-center">
-                  <NavLink to="/servicios" onClick={toggleMenu} className={getMobileNavLinkClasses}>Servicios</NavLink>
-                  <button onClick={() => setIsServicesSubMenuOpen(!isServicesSubMenuOpen)} className="p-2 ml-2 text-white">
-                      <ExpandMoreIcon className={`transition-transform duration-300 ${isServicesSubMenuOpen ? 'rotate-180' : ''}`} />
-                  </button>
-              </div>
-              <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isServicesSubMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
-                  <div className="pt-2 flex flex-col items-center">
-                      {servicesLinks.map(service => (
-                          <NavLink key={service.path} to={service.path} onClick={toggleMenu} className="py-2 text-lg text-gray-300 hover:text-cyan-400">
-                              {service.name}
-                          </NavLink>
-                      ))}
-                  </div>
+          {/* 3. ACTUALIZAMOS EL LOGO MÓVIL PARA QUE SIEMPRE SEA EL BLANCO */}
+          <Link to="/" onClick={toggleMenu} className="mb-12">
+            <img
+              src={logoBlanco}
+              alt="Logo de Vitccel"
+              className="h-24"
+            />
+          </Link>
+
+          {/* Enlaces */}
+          <NavLink to="/" onClick={toggleMenu} className={getMobileNavLinkClasses}>Inicio</NavLink>
+
+          <div className="text-center">
+            <div className="flex items-center justify-center">
+              <NavLink to="/servicios" onClick={toggleMenu} className={getMobileNavLinkClasses}>Servicios</NavLink>
+              <button onClick={() => setIsServicesSubMenuOpen(!isServicesSubMenuOpen)} className="p-2 ml-2 text-white">
+                <ExpandMoreIcon className={`transition-transform duration-300 ${isServicesSubMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+            <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isServicesSubMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
+              <div className="pt-2 flex flex-col items-center">
+                {servicesLinks.map(service => (
+                  <NavLink key={service.path} to={service.path} onClick={toggleMenu} className="py-2 text-lg text-gray-300 hover:text-cyan-400">
+                    {service.name}
+                  </NavLink>
+                ))}
               </div>
             </div>
-          
-            <NavLink to="/contacto" onClick={toggleMenu} className={getMobileNavLinkClasses}>Contacto</NavLink>
+          </div>
+
+          <NavLink to="/blog" onClick={toggleMenu} className={getMobileNavLinkClasses}>Blog</NavLink>
+          <NavLink to="/contacto" onClick={toggleMenu} className={getMobileNavLinkClasses}>Contacto</NavLink>
         </div>
 
       </div>
