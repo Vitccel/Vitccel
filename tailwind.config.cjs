@@ -12,8 +12,8 @@ module.exports = {
       keyframes: {
         // Animación para el fondo de imagen (Efecto Ken Burns)
         'pan-up': {
-          '0%': { transform: 'scale(1.1) translateY(0.5rem)', transformOrigin: 'center center' },
-          '100%': { transform: 'scale(1.2) translateY(-0.5rem)', transformOrigin: 'center center' },
+          '0%': { transform: 'scale(1.1) translateY(1rem)', transformOrigin: 'center center' },
+          '100%': { transform: 'scale(1.2) translateY(-0.8rem)', transformOrigin: 'center center' },
         },
         // Animación para el scroll infinito horizontal en partners
         'infinite-scroll': {
