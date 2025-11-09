@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -8,7 +7,6 @@ module.exports = {
       fontFamily: { 
         "Sen": ["sen", "sans-serif"] 
       },
-      // ... tus otros colores y extensiones
 
       // KEYFRAMES PARA LAS ANIMACIONES
       keyframes: {
@@ -16,6 +14,11 @@ module.exports = {
         'pan-up': {
           '0%': { transform: 'scale(1.1) translateY(0.5rem)', transformOrigin: 'center center' },
           '100%': { transform: 'scale(1.2) translateY(-0.5rem)', transformOrigin: 'center center' },
+        },
+        // Animación para el scroll infinito horizontal en partners
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
         },
         // Animación para la entrada del texto
         'fade-in-up': {
@@ -35,6 +38,8 @@ module.exports = {
         'pan-up': 'pan-up 20s infinite alternate ease-in-out',
         // Duración de 1s para una entrada elegante del texto
         'fade-in-up': 'fade-in-up 1s ease-out forwards',
+        // Asignación de la animación del carrusel de socios
+        'infinite-scroll': 'infinite-scroll 40s linear infinite',
       }
     },
   },

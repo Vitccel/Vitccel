@@ -1,31 +1,48 @@
 import React from 'react';
 
-// Datos de los socios. Tenerlos en un array facilita su mantenimiento.
 const partnersData = [
-  { name: 'Microsoft Partner', logoUrl: '/assets/img/partners/microsoft-partner.png', link: '#' },
-  { name: 'Acronis Partner', logoUrl: '/assets/img/partners/kaspersky.png', link: '#' },
-  { name: 'Dade2 Partner', logoUrl: '/assets/img/partners/acronis-cloud.png', link: '#' },
-  { name: 'VMware Partner', logoUrl: '/assets/img/partners/HUAWEI-logo.png', link: '#' },
+  { name: 'Microsoft Partner', logoUrl: '/assets/img/partners/microsoft-partner.png' },
+  { name: 'Acronis', logoUrl: '/assets/img/partners/acronis.png' },
+  { name: 'Aruba', logoUrl: '/assets/img/partners/Aruba.png' },
+  { name: 'Kaspersky', logoUrl: '/assets/img/partners/kaspersky.png' },
+  { name: 'Commscope', logoUrl: '/assets/img/partners/Commscope.svg' },
+  { name: 'Panduit', logoUrl: '/assets/img/partners/Panduit.svg' }, 
+  { name: 'Siemon', logoUrl: '/assets/img/partners/Siemon.webp' },
+  { name: 'Huawei', logoUrl: '/assets/img/partners/HUAWEI-logo.png' },
+  { name: 'VMware', logoUrl: '/assets/img/partners/vmware.svg' },  
+  { name: 'Dade2', logoUrl: '/assets/img/partners/dade2.webp' },
 ];
+
+const extendedPartners = [...partnersData, ...partnersData]; // Duplicamos para un bucle fluido
 
 export default function Partners() {
   return (
     <section id="partners" className="py-12 bg-white">
-      <div className="container mx-auto px-4 md:px-40 text-center">
-        {/* Usamos un H3 porque es un título de sección, pero no tan importante como los de servicios o por qué elegirnos */}
-        <h3 className="text-xl font-bold text-[#091E3E] font-sen uppercase tracking-wider mb-8">
+      <div className="container mx-auto px-4 text-center">
+        <h3 className="text-xl font-bold text-[#091E3E] font-sen uppercase tracking-wider mb-12">
           Con la confianza de líderes de la industria
         </h3>
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-          {partnersData.map((partner) => (
-            <a key={partner.name} href={partner.link} target="_blank" rel="noopener noreferrer" aria-label={partner.name}>
-              <img 
-                src={partner.logoUrl} 
-                alt={`Logo de ${partner.name}`}
-                className="h-10 md:h-16 opacity-60 hover:opacity-100 transition-opacity duration-300" 
-              />
-            </a>
-          ))}
+        
+        {/* Contenedor principal del carrusel con máscara de degradado */}
+        <div className="relative w-full overflow-hidden">
+          {/* Degradado izquierdo para efecto fade-in */}
+          <div className="absolute top-0 left-0 z-10 w-24 h-full bg-gradient-to-r from-white to-transparent" />
+
+          {/* El div animado que contiene los logos */}
+          <div className="flex animate-infinite-scroll group-hover:pause-animation">
+            {extendedPartners.map((partner, index) => (
+              <div key={index} className="flex-shrink-0 mx-8">
+                <img 
+                  src={partner.logoUrl} 
+                  alt={`Logo de ${partner.name}`}
+                  className="h-10 md:h-12 max-w-none opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Degradado derecho para efecto fade-out */}
+          <div className="absolute top-0 right-0 z-10 w-24 h-full bg-gradient-to-l from-white to-transparent" />
         </div>
       </div>
     </section>
