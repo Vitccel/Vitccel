@@ -4,3 +4,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilos para los bullets de la paginación de Swiper */
+.swiper-pagination-bullet {
+  background-color: #6B7280; /* Un gris neutro para los inactivos */
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #06A3DA !important; /* El color cian de la marca para el activo */
+}

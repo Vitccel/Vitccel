@@ -116,9 +116,10 @@ export default function Nube() {
             Construido sobre Tecnología Líder en la Industria
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-            <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft" className="h-12 opacity-70" />
-            <img src="/assets/img/partners/acronis-cloud.png" alt="Logo de Dade2" className="h-16 opacity-70" />
-            <img src="/assets/img/partners/vmware.svg" alt="Logo de VMWare" className="h-8 opacity-70" />
+            <img src="/assets/img/partners/dade2.webp" alt="Logo de Microsoft" className="h-16 opacity-70" />
+            <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft" className="h-14 opacity-70" />
+            <img src="/assets/img/partners/acronis-cloud.png" alt="Logo de Dade2" className="h-14 opacity-70" /> 
+            <img src="/assets/img/partners/vmware.svg" alt="Logo de VMWare" className="h-10 opacity-70" />
           </div>
         </div>
       </section>
