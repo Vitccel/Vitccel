@@ -19,9 +19,16 @@ const slidesData = [
         buttonLink: '/servicios',
     },
     {
+        backgroundImage: '/assets/img/control.jpg', // Sugerencia: una imagen de un dashboard o centro de operaciones
+        title: <>Control Total y Proactivo <br /> de su Infraestructura TI</>,
+        description: 'Desde una consola unificada, monitoreamos el estado de todos sus equipos, automatizamos el mantenimiento y aplicamos políticas de seguridad para prevenir incidencias antes de que ocurran.',
+        buttonText: 'Optimizar Soporte TI',
+        buttonLink: '/servicios/soporte',
+    },
+    {
         backgroundImage: '/assets/img/fibra001.jpg',
         title: <>Infraestructura Robusta <br /> en la Nube y Redes</>,
-        description: 'Desde servidores virtuales con Dade2 hasta licenciamiento Microsoft y redes de fibra óptica. Optimizamos su infraestructura para el máximo rendimiento.',
+        description: 'Servidores virtuales, licenciamiento de software y redes de fibra óptica. Optimizamos su infraestructura para el máximo rendimiento.',
         buttonText: 'Explorar Infraestructura',
         buttonLink: '/servicios/soluciones-en-la-nube',
     },

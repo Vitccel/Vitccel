@@ -118,7 +118,6 @@ export default function Backup() {
           </h2>
           <div className="flex justify-center items-center gap-x-12">
             <img src="/assets/img/partners/acronis.png" alt="Logo de Acronis Cyber Protect Cloud" className="h-20" />
-            <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft Partner" className="h-12" />
           </div>
         </div>
       </section>

@@ -5,12 +5,8 @@ const partnersData = [
   { name: 'Acronis', logoUrl: '/assets/img/partners/acronis.png' },
   { name: 'Aruba', logoUrl: '/assets/img/partners/Aruba.png' },
   { name: 'Kaspersky', logoUrl: '/assets/img/partners/kaspersky.png' },
-  { name: 'Commscope', logoUrl: '/assets/img/partners/Commscope.svg' },
-  { name: 'Panduit', logoUrl: '/assets/img/partners/Panduit.svg' }, 
-  { name: 'Siemon', logoUrl: '/assets/img/partners/Siemon.webp' },
   { name: 'Huawei', logoUrl: '/assets/img/partners/HUAWEI-logo.png' },
-  { name: 'VMware', logoUrl: '/assets/img/partners/vmware.svg' },  
-  { name: 'Dade2', logoUrl: '/assets/img/partners/dade2.webp' },
+  { name: 'k365', logoUrl: '/assets/img/partners/Kaseya.png' },
 ];
 
 const extendedPartners = [...partnersData, ...partnersData]; // Duplicamos para un bucle fluido
