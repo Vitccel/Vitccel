@@ -117,9 +117,6 @@ export default function Redes() {
             Trabajamos Exclusivamente con Marcas Líderes
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-            <img src="/assets/img/partners/Panduit.svg" alt="Logo de Panduit" className="h-10" />
-            <img src="/assets/img/partners/Siemon.webp" alt="Logo de Siemon" className="h-16" />
-            <img src="/assets/img/partners/Commscope.svg" alt="Logo de Commscope" className="h-14" />
             <img src="/assets/img/partners/Aruba.png" alt="Logo de HPE Aruba Networking" className="h-12" />
             <img src="/assets/img/partners/kaspersky.png" alt="Logo de Ubiquiti" className="h-14" />
           </div>

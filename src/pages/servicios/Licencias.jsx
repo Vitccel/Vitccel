@@ -118,7 +118,6 @@ export default function Licencias() {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
             <img src="/assets/img/partners/microsoft-partner.png" alt="Logo de Microsoft Partner" className="h-12" />
-            <img src="/assets/img/partners/vmware.svg" alt="Logo de VMWare" className="h-8" />
           </div>
         </div>
       </section>
