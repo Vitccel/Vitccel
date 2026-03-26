@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './Layout'
 import Inicio from './pages/Inicio'
@@ -11,15 +11,17 @@ import Seguridad from './pages/servicios/Seguridad'
 import Licencias from './pages/servicios/Licencias'
 import Soporte from './pages/servicios/Soporte'
 import NotFound from './pages/NotFound'
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import CategoryPage from './pages/CategoryPage';
 import ScrollToTop from './components/ScrollToTop'
+
+const Blog = lazy(() => import('./pages/Blog'))
+const BlogPost = lazy(() => import('./pages/BlogPost'))
+const CategoryPage = lazy(() => import('./pages/CategoryPage'))
 
 export default function App(){
   return (
     <Layout>
       <ScrollToTop />
+      <Suspense fallback={<div className="min-h-[40vh] flex items-center justify-center text-gray-600">Cargando…</div>}>
       <Routes>
         <Route path='/' element={<Inicio/>} />
         <Route path='/contacto' element={<Contacto/>} />
@@ -35,6 +37,7 @@ export default function App(){
         <Route path='/blog/categoria/:slug' element={<CategoryPage />} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
+      </Suspense>
     </Layout>
   )
 }

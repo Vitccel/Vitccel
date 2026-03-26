@@ -71,7 +71,7 @@ export default function Contacto() {
             "image": "https://www.vitccel.com/assets/logos/logo-vitccel.png",
             "url": "https://www.vitccel.com/contacto",
             "telephone": "+573235806796",
-            "email": "contacto@vitccel.com",
+            "email": "comercial@vitccel.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Carrera 46a # 51 - 34",
@@ -112,7 +112,7 @@ export default function Contacto() {
                 <EmailIcon className="text-[#06A3DA] text-3xl mt-1" />
                 <div>
                   <h3 className="font-bold text-lg text-gray-800">Correo Electrónico</h3>
-                  <a href="mailto:contacto@vitccel.com" className="text-gray-600 hover:text-[#06A3DA] transition-colors">contacto@vitccel.com</a>
+                  <a href="mailto:comercial@vitccel.com" className="text-gray-600 hover:text-[#06A3DA] transition-colors">comercial@vitccel.com</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

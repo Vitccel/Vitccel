@@ -22,10 +22,10 @@ export default function SocialBar() {
         <div className="flex items-center space-x-2">
           <EmailIcon fontSize="small" className="text-[#0d486b]" />
           <a
-            href="mailto:contacto@vitccel.com"
+            href="mailto:comercial@vitccel.com"
             className="text-sm md:text-base hover:text-cyan-400 transition-colors"
           >
-            contacto@vitccel.com
+            comercial@vitccel.com
           </a>
         </div>
 

@@ -7,21 +7,25 @@ import sanityClient, { urlFor } from '../apis/sanityClient';
 import { PortableText } from '@portabletext/react';
 import CtaSection from '../components/CtaSection';
 
+// Inner safe area: keeps title/meta below fixed SocialBar + Toolbar; hero image stays full-bleed behind the nav.
+const BLOG_HERO_TITLE_SAFE =
+    'pt-[13.125rem] md:pt-[8rem] lg:pt-[6.75rem]';
+
 // --- COMPONENTE SKELETON PARA ESTA PÁGINA ---
 // Muestra una previsualización visual de la página mientras se cargan los datos.
 const BlogPostSkeleton = () => (
     <>
+        <article>
         {/* Skeleton del Encabezado */}
-        <header className="relative h-96 md:h-[500px] flex items-end justify-center bg-gray-200 animate-pulse">
-            <div className="relative z-10 text-center px-4 md:px-40 pb-12 md:pb-20 w-full">
-                {/* Skeleton del Título */}
-                <div className="h-12 bg-gray-300 rounded-md w-3/4 mx-auto mb-4 animate-pulse"></div>
-                {/* Skeleton de la Fecha */}
-                <div className="h-6 bg-gray-300 rounded-md w-1/3 mx-auto mb-4 animate-pulse"></div>
-                {/* Skeleton de las Categorías */}
-                <div className="flex flex-wrap justify-center gap-2 mt-4">
-                    <div className="h-6 w-24 bg-gray-300 rounded-full animate-pulse"></div>
-                    <div className="h-6 w-20 bg-gray-300 rounded-full animate-pulse"></div>
+        <header className="relative min-h-[26rem] md:min-h-[560px] flex flex-col bg-gray-200 animate-pulse">
+            <div className={`relative z-10 flex flex-1 min-h-0 flex-col justify-end px-4 md:px-40 pb-14 md:pb-24 w-full ${BLOG_HERO_TITLE_SAFE}`}>
+                <div className="text-center w-full">
+                    <div className="h-12 bg-gray-300 rounded-md w-3/4 mx-auto mb-4 animate-pulse"></div>
+                    <div className="h-6 bg-gray-300 rounded-md w-1/3 mx-auto mb-4 animate-pulse"></div>
+                    <div className="flex flex-wrap justify-center gap-2 mt-4">
+                        <div className="h-6 w-24 bg-gray-300 rounded-full animate-pulse"></div>
+                        <div className="h-6 w-20 bg-gray-300 rounded-full animate-pulse"></div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -37,6 +41,7 @@ const BlogPostSkeleton = () => (
                 <div className="h-6 bg-gray-200 rounded w-3/4 animate-pulse"></div>
             </div>
         </div>
+        </article>
     </>
 );
 
@@ -145,21 +150,25 @@ export default function BlogPost() {
                     </Helmet>
 
                     <article>
-                        <header
-                            className="relative h-96 md:h-[500px] flex items-end justify-center text-white bg-cover bg-center"
-                            style={{ backgroundImage: `url(${urlFor(post.mainImage).url()})` }}
-                        >
-                            <div className="absolute inset-0 bg-black opacity-60"></div>
-                            <div className="relative z-10 text-center px-4 md:px-40 pb-12 md:pb-20">
-                                <h1 className="text-4xl md:text-5xl font-bold font-sen mb-4">{post.title}</h1>
-                                <p className="text-lg text-gray-300">{formatDate(post.publishedAt)}</p>
-                                {post.categories && (
-                                    <div className="flex flex-wrap justify-center gap-2 mt-4">
-                                        {post.categories.map(cat => (
-                                            <Link key={cat.slug.current} to={`/blog/categoria/${cat.slug.current}`} className="bg-white/20 hover:bg-white/30 text-xs font-bold text-white px-3 py-1 rounded-full transition-colors">{cat.title}</Link>
-                                        ))}
-                                    </div>
-                                )}
+                        <header className="relative min-h-[26rem] md:min-h-[560px] flex flex-col text-white overflow-hidden">
+                            <div
+                                className="absolute inset-0 bg-cover bg-center"
+                                style={{ backgroundImage: `url(${urlFor(post.mainImage).url()})` }}
+                                aria-hidden
+                            />
+                            <div className="absolute inset-0 bg-black/60" aria-hidden />
+                            <div className={`relative z-10 flex flex-1 min-h-0 flex-col justify-end px-4 md:px-40 pb-14 md:pb-24 ${BLOG_HERO_TITLE_SAFE}`}>
+                                <div className="text-center w-full">
+                                    <h1 className="text-4xl md:text-5xl font-bold font-sen mb-4">{post.title}</h1>
+                                    <p className="text-lg text-gray-300">{formatDate(post.publishedAt)}</p>
+                                    {post.categories && (
+                                        <div className="flex flex-wrap justify-center gap-2 mt-4">
+                                            {post.categories.map(cat => (
+                                                <Link key={cat.slug.current} to={`/blog/categoria/${cat.slug.current}`} className="bg-white/20 hover:bg-white/30 text-xs font-bold text-white px-3 py-1 rounded-full transition-colors">{cat.title}</Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </header>
 

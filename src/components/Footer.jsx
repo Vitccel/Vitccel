@@ -75,7 +75,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <EmailIcon className="text-[#06A3DA]" />
-                <a href="mailto:contacto@vitccel.com" className="hover:text-[#06A3DA] transition-colors">contacto@vitccel.com</a>
+                <a href="mailto:comercial@vitccel.com" className="hover:text-[#06A3DA] transition-colors">comercial@vitccel.com</a>
               </li>
               <li className="flex items-start space-x-3">
                 <LocationOnIcon className="text-[#06A3DA] mt-1" />
